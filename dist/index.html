@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#090d12" />
+    <meta name="description" content="Wraithbound — a spectral open-world action adventure." />
+    <title>WRAITHBOUND — The Hollow Wilds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="/assets/index-DE7h6mOs.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BIK7YYWR.css">
+  </head>
+  <body>
+    <main id="game-shell">
+      <div id="world"></div>
+      <div class="vignette"></div>
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Wraithbound home"><span class="brand-mark">✦</span><span>WRAITH<span class="brand-light">BOUND</span></span></a>
+        <div class="world-label"><span class="live-dot"></span> THE HOLLOW WILDS <span class="label-divider">/</span> <span id="clock">DUSK · 19:42</span></div>
+        <button id="pause-button" class="icon-button" aria-label="Pause game"><span>Ⅱ</span></button>
+      </header>
+      <section class="hud" aria-label="Game status">
+        <div class="status-card">
+          <div class="player-line"><div class="portrait">✦</div><div class="player-name"><strong>ARIN VALE</strong><small>WAYFARER · LV 08</small></div><div class="level-badge">08</div></div>
+          <div class="bar-row"><span class="bar-icon heart">♥</span><div class="meter"><div class="meter-fill health-fill" id="health-fill"></div></div><span class="meter-value" id="health-value">100</span></div>
+          <div class="bar-row"><span class="bar-icon spark">✧</span><div class="meter"><div class="meter-fill spirit-fill" id="spirit-fill"></div></div><span class="meter-value" id="spirit-value">68</span></div>
+          <div class="xp-track"><div id="xp-fill"></div></div>
+        </div>
+        <div class="objective-card"><div class="eyebrow"><span class="objective-icon">◈</span> CURRENT QUEST <span class="quest-count" id="quest-count">0 / 3</span></div><strong id="quest-title">THE LAST EMBERS</strong><p id="quest-description">Collect 3 lost spirit fragments</p><div class="quest-progress"><span id="quest-progress"></span></div></div>
+        <div class="map-card"><div class="map-title">THE HOLLOW WILDS <span>N</span></div><div class="map"><div class="map-land land-a"></div><div class="map-land land-b"></div><div class="map-river"></div><div class="map-path"></div><div class="map-marker altar-marker">⌂</div><div class="map-marker foe-marker">·</div><div class="map-marker player-marker"><i></i></div><div class="map-compass">N</div></div><div class="map-footer"><span><i class="map-dot"></i> YOU</span><span><i class="map-dot altar-dot"></i> SHRINE</span></div></div>
+      </section>
+      <div class="location"><span class="location-line"></span><div><small>REGION DISCOVERED</small><strong>ASHENFALL MEADOW</strong></div></div>
+      <div class="toast" id="toast" role="status"></div>
+      <div class="bottom-hud"><div class="control-hint"><kbd>W A S D</kbd><span>MOVE</span><i></i><kbd>SPACE</kbd><span>LEAP</span><i></i><kbd>F</kbd><span>SOAR</span></div><div class="weapon-label"><span class="weapon-glyph">╱</span><span><small>RELIC WEAPON</small><strong>SKYBREAKER</strong></span></div></div>
+      <div class="touch-controls" aria-label="Touch controls">
+        <div class="joystick" id="joystick"><div class="joy-ring"><div class="joy-knob" id="joy-knob"></div></div><span class="joy-label">MOVE</span></div>
+        <div class="touch-actions"><button class="action-btn fly-action" id="fly-button"><span>↑</span><small>SOAR</small></button><button class="action-btn attack-action" id="attack-button"><span>✦</span><small>STRIKE</small></button></div>
+      </div>
+      <div class="crosshair"><span></span></div>
+      <div class="overlay" id="overlay">
+        <div class="title-screen" id="title-screen"><div class="title-kicker"><span></span> A SUPERNATURAL OPEN-WORLD ADVENTURE <span></span></div><h1>WRAITH<span>BOUND</span></h1><p class="title-sub">THE HOLLOW WILDS</p><div class="title-rule"><i></i>✦<i></i></div><p class="title-copy">Where the veil grows thin, the forgotten rise.<br />Your blade is the last light left.</p><button class="primary-button" id="start-button"><span>ENTER THE WILDS</span><b>↗</b></button><div class="title-foot">EXPLORE <i>·</i> SURVIVE <i>·</i> REMEMBER</div></div>
+        <div class="pause-panel hidden" id="pause-panel"><div class="pause-eyebrow">THE WORLD WAITS</div><h2>TAKE A BREATH</h2><p>Your journey through the Hollow Wilds is paused.</p><button class="primary-button" id="resume-button"><span>RETURN TO THE WILDS</span><b>↗</b></button><div class="pause-tip">TIP &nbsp;·&nbsp; Hold your ground and strike when the creatures draw near.</div></div>
+        <div class="end-panel hidden" id="end-panel"><div class="pause-eyebrow" id="end-kicker">A LIGHT REMAINS</div><h2 id="end-title">THE SHRINE AWAKENS</h2><p id="end-copy">The spirits remember your name.</p><button class="primary-button" id="again-button"><span>PLAY AGAIN</span><b>↗</b></button></div>
+      </div>
+      <div class="damage-flash" id="damage-flash"></div>
+      <div class="screen-reader" id="announcer" aria-live="polite"></div>
+    </main>
+  </body>
+</html>
